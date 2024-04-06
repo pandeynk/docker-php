@@ -5,10 +5,15 @@ services:
     image: nginx:latest
     ports:
       - "80:80"
+    volumes:
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
 
   app:
     build:
       dockerfile: ./Dockerfile
+    volumes:
+      - ./public:/public
+      - ./app:/app
   #php
   #mysql
   #redis
