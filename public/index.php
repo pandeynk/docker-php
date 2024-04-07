@@ -1,2 +1,3 @@
 <?php
-echo "Hello New Earth";
+include_once "./../app/index.php";
+echo "<h1>Hello Earth</h1>";

@@ -10,10 +10,8 @@ services:
   # php
   app:
     build:
-      dockerfile: ./Dockerfile
-    volumes:
-      - ./public:/public
-      - ./app:/app
+      context: .
+      dockerfile: Dockerfile
   #mysql
   db:
     image: mysql:8.0
